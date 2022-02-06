@@ -1,0 +1,12 @@
+@use "sass:math";
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function rem($pixels, $context: 16) {
+	@return (math.div($pixels, $context)) * 1rem;
+}
+
+@function light-comp($color) {
+	$complement: complement($color);
+	$light-complement: lighten($complement, 30%);
+	@return $light-complement;
+}
