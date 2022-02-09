@@ -11,11 +11,13 @@ const purgecss = require("gulp-purgecss");
 
 // Sass Task
 function scssTask() {
-	return src("app/scss/style.scss", { sourcemaps: true })
-		.pipe(sass())
-		.pipe(purgecss({ content: ["*.html"] }))
-		.pipe(postcss([autoprefixer(), cssnano()]))
-		.pipe(dest("dist", { sourcemaps: "." }));
+	return (
+		src("app/scss/style.scss", { sourcemaps: true })
+			.pipe(sass())
+			//.pipe(purgecss({ content: ["*.html"] })) // remove unused codes from css
+			.pipe(postcss([autoprefixer(), cssnano()]))
+			.pipe(dest("dist", { sourcemaps: "." }))
+	);
 }
 
 // JavaScript Task
