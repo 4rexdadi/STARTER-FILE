@@ -2,6 +2,18 @@
 @use "../globals/variables" as *;
 @use "../globals/fonts" as *;
 
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+}
+
+.block {
+	display: block;
+}
+
 .btn {
 	text-decoration: none;
 	cursor: pointer;
@@ -40,6 +52,21 @@
 			text-decoration: underline;
 		}
 	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
+}
+.uppercase {
+	text-transform: uppercase;
 }
 
 // @debug math.div(10, 3);

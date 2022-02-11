@@ -16,6 +16,8 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+	line-height: 1.4;
+	min-height: 100vh;
 }
 
 ul {
@@ -35,6 +37,23 @@ img {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
 	line-height: 1.1;
+}
+
+/* make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+	font: inherit;
 }
