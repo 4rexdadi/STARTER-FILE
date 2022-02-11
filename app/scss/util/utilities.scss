@@ -19,18 +19,6 @@
 	cursor: pointer;
 	display: inline-block;
 	border: 0;
-	padding: 0.875rem 2.1875rem;
-	border-radius: 50px;
-	background-color: $secondary;
-	font-weight: 400;
-	font-family: $base-font;
-
-	a {
-		color: $font-color;
-	}
-	&:hover {
-		background: $primary;
-	}
 }
 
 .card {
