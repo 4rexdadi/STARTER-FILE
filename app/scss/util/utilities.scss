@@ -57,6 +57,37 @@
 	text-transform: uppercase;
 }
 
+// preloader
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--primary);
+	transition: opacity 0.75s, visibility 0.75s;
+	z-index: 201;
+
+	&::after {
+		content: "";
+		width: 75px;
+		height: 75px;
+		border: 15px solid #dddddd;
+		border-top-color: var(--secondary);
+		border-radius: 50%;
+		animation: loading 0.75s ease infinite;
+	}
+}
+
+.preloader--hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+
 // @debug math.div(10, 3);
 // @debug math.$pi;
 // @debug math.floor(2.6);
